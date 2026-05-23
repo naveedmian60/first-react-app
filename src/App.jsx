@@ -1,24 +1,18 @@
-
-import { useState } from 'react';
 import './App.css'
-import Navbar from './Navbar'
-
-
-
-
-function App() {
+import Header from '../components/Header'
+import reactLogo from './assets/react.svg'
+import data from './data.json'
+const App = () => {
+ console.log(data);
  
-const [ count , func] = useState(0);
- function increment() {
- func(count+1)
-  
- }
   return (
     <div>
-<button onClick={increment}>Increment</button>
-{count}
+      <Header/>
+      <h1 className='hed'>App</h1>
+      <img src={reactLogo} alt="" />
     </div>
   )
 }
 
 export default App
+
